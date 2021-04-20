@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+x1= np.linspace(0,1000,num=1000,dtype=int)
+y1 = np.genfromtxt('/home/mzhu/madesi/mzhu_code/windmill24.csv',delimiter=',')
+y1 = y1[:1000,3]
+# x2 = np.linspace(0,150,num=150,dtype=int)
+# y2 = np.genfromtxt('/home/mzhu/DSMGP_LMM_usflight150.csv',delimiter=',')
+# print(y2)
+# y2 = y2/2
+# x1= np.linspace(0,250,num=250,dtype=int)
+# y1 = np.genfromtxt('/home/mzhu/madesi/mzhu_code/SPGPN_LMM_windmill.csv',delimiter=',')
+# y1 = np.mean(y1,axis=0)
+# x2 = np.linspace(0,250,num=250,dtype=int)
+# y2 = np.genfromtxt('/home/mzhu/madesi/mzhu_code/DSMGP_LMM_windmill.csv',delimiter=',')
+# y2 = np.mean(y2,axis=0)
+f, (ax1, ax2) = plt.subplots(2, 1)
+ax1.plot(x1,y1,'r-',label='MOMoGP')
+# ax2.plot(x2,y2,'g-',label='DSMGP')
+# ax1.plot(x5,y5,'g-',label='original_windmill')
+# ax2.plot(x2,y2,'r-',label='improved_model')
+# ax2.plot(x6,y6,'g-',label='original_model')
+plt.xlabel('epoch')
+# plt.ylabel('loss for usFlight')
+# ax1.set_title('mll of wind mill dataset')
+# plt.xlabel('SMUDGE')
+# plt.ylabel('mll')
+# ax2.set_title('mll of ccpp dataset')
+# plt.legend()
+plt.show()
+# print(np.mean(y1,axis=0))
+# print(np.std(y1,axis=0))
